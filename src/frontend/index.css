@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Playfair Display */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/PlayfairDisplay-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Crimson Pro */
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/assets/fonts/CrimsonPro-Variable.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Geist Mono */
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/assets/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Forest green primary */
+    --primary: 0.32 0.09 155;
+    --primary-foreground: 0.97 0.015 80;
+
+    /* Warm cream background */
+    --background: 0.97 0.018 80;
+    --foreground: 0.18 0.015 80;
+
+    /* Card - slightly warmer parchment */
+    --card: 0.96 0.014 78;
+    --card-foreground: 0.18 0.015 80;
+
+    --popover: 0.96 0.014 78;
+    --popover-foreground: 0.18 0.015 80;
+
+    /* Warm gold accent */
+    --accent: 0.75 0.14 75;
+    --accent-foreground: 0.18 0.015 80;
+
+    /* Secondary - sage green tint */
+    --secondary: 0.90 0.03 145;
+    --secondary-foreground: 0.25 0.07 155;
+
+    --muted: 0.91 0.02 80;
+    --muted-foreground: 0.50 0.025 80;
+
+    --border: 0.85 0.025 80;
+    --input: 0.88 0.02 80;
+    --ring: 0.32 0.09 155;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.97 0.018 80;
+    --sidebar-foreground: 0.18 0.015 80;
+    --sidebar-primary: 0.32 0.09 155;
+    --sidebar-primary-foreground: 0.97 0.015 80;
+    --sidebar-accent: 0.91 0.02 80;
+    --sidebar-accent-foreground: 0.18 0.015 80;
+    --sidebar-border: 0.85 0.025 80;
+    --sidebar-ring: 0.32 0.09 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    line-height: 1.2;
+  }
+}
